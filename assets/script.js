@@ -12,11 +12,13 @@ let sugar = 0 // Sugar Sprinkle
 let gbVote = document.querySelector('#qty-gb')
 // add event to plus btn
 let gbPlusBtn = document.querySelector('#add-gb');
+let total = document.querySelector('#qty-total');
 
  gbPlusBtn.addEventListener('click', function(e){
      let gbPlusBtn = parseInt(gbVote.textContent);
     gbPlusBtn = gbPlusBtn + 1;
-    gbVote.textContent = gbPlusBtn
+    gbVote.textContent = gbPlusBtn;
+    total.textContent = gbPlusBtn;
  
 });
 // add event to Gingerbread minus btn
@@ -25,7 +27,8 @@ let gbMinusBtn = document.querySelector('#minus-gb');
  gbMinusBtn.addEventListener('click', function(e){
      let gbMinusBtn = parseInt(gbVote.textContent);
     gbMinusBtn = gbMinusBtn - 1;
-    gbVote.textContent = gbMinusBtn
+    gbVote.textContent = gbMinusBtn;
+    total.textContent = gbMinusBtn;
  
 });
 
@@ -39,6 +42,7 @@ ccMinusBtn.addEventListener('click', function(e) {
     let ccMinusBtn = parseInt(ccVote.textContent);
     ccMinusBtn = ccMinusBtn - 1;
     ccVote.textContent = ccMinusBtn;
+    total.textContent = ccMinusBtn;
 })
   
 // cc plus btn
@@ -48,6 +52,7 @@ ccPlusBtn.addEventListener('click', function(e) {
     let ccPlusBtn = parseInt(ccVote.textContent);
     ccPlusBtn = ccPlusBtn + 1;
     ccVote.textContent = ccPlusBtn;
+    total.textContent = ccPlusBtn;
 })
  
 // add event to sugar (+), (-) btn.
@@ -60,6 +65,7 @@ sugarMinusBtn.addEventListener('click', function(e) {
     let sugarMinusBtn = parseInt(sugarVote.textContent);
     sugarMinusBtn = sugarMinusBtn - 1;
     sugarVote.textContent = sugarMinusBtn;
+    total.textContent = sugarMinusBtn;
 })
 
 // Sugar plus btn
@@ -69,5 +75,5 @@ sugarPlusBtn.addEventListener('click', function(e) {
     let sugarPlusBtn = parseInt(sugarVote.textContent);
     sugarPlusBtn = sugarPlusBtn + 1;
     sugarVote.textContent = sugarPlusBtn;
+    total.textContent = sugarPlusBtn;
 })
-
